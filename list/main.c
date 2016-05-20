@@ -102,9 +102,10 @@ void emptyList(List *head)
     List *pList = NULL;
     while(head != NULL)
     {
-       pList = head->next;
-       free(head);
-       head = pList;
+
+        pList = head;
+        head = head->next;
+        free(pList);
     }
 }
 
